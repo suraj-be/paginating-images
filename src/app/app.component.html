@@ -1,3 +1,9 @@
 <div class="container">
-  <h1>My Journey Begins, right here, right now!!!</h1>
+  <nav>
+    <ul class="pagination">
+      <li class="page-item" *ngFor="let image of images; let i = index">
+        <a href="" class="page-link">{{ i + 1 }}</a>
+      </li>
+    </ul>
+  </nav>
 </div>
