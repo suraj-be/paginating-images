@@ -1,12 +1,18 @@
 <div class="container">
+  <p class="title no-select">{{images[currentPage - 1].title}}</p>
   <div class="img-wrap no-select">
-    <img [src]="images[currentPage - 1].url" class="actual-img" alt="images[currentPage - 1].title" width="400" height="400" loading="lazy">
+    <img [src]="images[currentPage - 1].url" class="actual-img" alt="images[currentPage - 1].title" width="400"
+      height="400" loading="lazy">
   </div>
   <nav>
     <ul class="page-item-wrapper">
-      <li class="page-item no-select prev-btn" [ngClass]="{'btn-disabled': currentPage === 1}" (click)="currentPage = currentPage - 1">Prev</li>
-      <li class="page-item no-select" *ngFor="let image of images; let i = index" [ngClass]="{active: (i + 1) === currentPage}" (click)="currentPage = (i + 1)">{{ i + 1 }}</li>
-      <li class="page-item no-select next-btn" [ngClass]="{'btn-disabled': currentPage === images.length}" (click)="currentPage = currentPage + 1">Next</li>
+      <li class="page-item no-select prev-btn" [ngClass]="{'btn-disabled': currentPage === 1}"
+        (click)="currentPage = currentPage - 1">Prev</li>
+      <ng-container *ngFor="let image of images; let i = index">
+        <li class="page-item no-select" [ngClass]="{active: (i + 1) === currentPage}" (click)="currentPage = (i + 1)" *ngIf="checkWindowIndex(i + 1)">{{ i + 1 }}</li>
+      </ng-container>
+      <li class="page-item no-select next-btn" [ngClass]="{'btn-disabled': currentPage === images.length}"
+        (click)="currentPage = currentPage + 1">Next</li>
     </ul>
   </nav>
 </div>
