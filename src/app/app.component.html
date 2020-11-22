@@ -1,5 +1,5 @@
 <div class="container">
-  <p class="title" appClass [setBgColor]="'lime'">{{images[currentPage - 1].title}}</p>
+  <p class="title" appClass [setBgColor]="'beige'">{{images[currentPage - 1].title}}</p>
   <div class="img-wrap no-select">
     <img [src]="images[currentPage - 1].url" class="actual-img" alt="images[currentPage - 1].title" width="400"
       height="400" loading="lazy">
@@ -16,7 +16,3 @@
     </ul>
   </nav>
 </div>
-
-<!-- 
-  - ngFor and ngIf are strucural directives
--->
