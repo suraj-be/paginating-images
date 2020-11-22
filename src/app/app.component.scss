@@ -1,6 +1,5 @@
 .container{max-width:800px;margin:auto;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column}
 .btn-disabled{color: #6c757d; pointer-events: none;background-color: #fff; border-color: #dee2e6 !important;}
-.page-item-wrapper{}
 .page-item{border:1px solid #FFB74D;border-right:none;display:inline-block;padding:0 18px;height:40px;line-height:40px;cursor:pointer;transition:all 0.3s ease-out}
 .page-item:last-child{border-right:1px solid #FFB74D}
 .page-item:hover{background:#FFE082}
